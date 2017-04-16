@@ -5,7 +5,6 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display|Raleway" rel="stylesheet">
 <link type="text/css" href="http://dahi.manoa.hawaii.edu/silence/jplayer/src/skin/pink.flag/scss/jplayer.pink.flag.scss" rel="stylesheet" />
-<link rel="stylesheet" href="http://dahi.manoa.hawaii.edu/silence/fontawesome/css/font-awesome.min.css">
 <script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/lib/jquery.min.js"></script>
 <script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/src/javascript/jplayer/jquery.jplayer.js"></script>
 <script type="text/javascript">
@@ -13,10 +12,11 @@
   $("#jquery_jplayer_1").jPlayer({
    ready: function () {
     $(this).jPlayer("setMedia", {
-     mp3: "http://dahi.manoa.hawaii.edu/silence/audio/poems/BilgerPoemTrip1.mp3"
+     mp3: "http://dahi.manoa.hawaii.edu/silence/audio/poems/KuyStairsPoemTrip1.2.mp3"
     });
    },
-   supplied: "mp3"
+   supplied: "mp3", 
+   loop: true
   });
  });
 </script>
@@ -86,7 +86,7 @@ body
 {
 	text-align: center;
 	font-size: 25px;
-	margin-top: 300px;
+	margin-top: 25px;
 	display: inline-block;
 	width: 20%;
 }
@@ -156,7 +156,7 @@ body
 {
 	opacity: 1;
 }
-.jp-play, .jp-pause, .jp-repeat
+#startlistening
 {
 	color: #fdedff;
 	font-family: Raleway;
@@ -179,53 +179,35 @@ body
 			<button class="currentpoem-button fade-in">C u r r e n t</button>
 			<div class="currentpoem-content">
 				<p>
-				I scare cats under cars and enter
-				the building back way disoriented
-				through addition signs tableaus 
-				of liquid hydrogen carboys.
+				There is down sound
+				and for each Newton there is up sound.
 
-				Sit in front of the mural of Kū there
-				is no I there are cart wheels drumming
-				there is progression progressing
+				Down sound when perched on top step:
+				recede recede rece-
 
-				car-lot-parking
-				paper-bag-slip-opening
-				backpack-zipper-tinkling
-				foot-shoe-scuff-scuff
-				elevator-arrival-sounding-(dinging)
-				door-open-close-slamming
-				student-friends-chattering
-				Keller-Hall-cooling-humming
-				yellowed-kukui-leaf-landing-table-down-plopping
-				hallway-walking-slipper-rasping
-				high-ceiling-ringing-cellphone-returning
-				skate-board-embarking-clank-and-rolling
-				toilet-flushing
-				keys-jingling-pant-leg-tempo
-				door-hinge-open-keening
-				mynah-mynah-squawk-reminding
-				silent-computer-browsing
-				mobile-texting-in-touch-touching
-				wings-spread-bird-landing
-				distant-walker-ramp-descending
-				the still plants
-				the still wind
+				I guess at the match:
+				upsound, bottom, -de
 
-				Kū is soundless open mouthed
-				fixed tense painted his clinging past
-				to fish with wide present mother-of-pearl eyes.</p>
+				The hypothetical:
+				mid point, mid floor, mid sound?
+
+				Either ways, these three points render
+				unattachedly sonic interstice:
+
+				where does that door close 2nd 
+				3rd 4th 5th? Top and bottom end 
+
+				the continuum of mere, is coming
+				and going. Coming is near and
+
+				going is far scaping. For each sound
+				there is up same down
+
+				up-into-sounding-down-into-rounding. </p>
 			</div>
 		</div>
-		<div id="jquery_jplayer_1"></div>
-		<div class="poemaudio-center fade-in" id="jp_container_1">
-	 		<a href="#" class="jp-play">
-	 			<i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
-			<a href="#" class="jp-pause">
-				<i class="fa fa-pause fa-3x" aria-hidden="true"></i></a>
-			<div class="jp-toggles">
-	          	<a href="#" class="jp-repeat">
-	          		<i class="fa fa-repeat" aria-hidden="true"></i></a>
-	       	</div>
+		<div class="poemaudio-center fade-in">
+	 		<a href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/KUY_712*.html" class="fade-in" id="startlistening">S T A R T &nbsp L I S T E N I N G</a>
 		</div>
 		<div class="poemmap-right">
 			<button class="poemmap-button fade-in">P o e m  &nbsp M a p</button>

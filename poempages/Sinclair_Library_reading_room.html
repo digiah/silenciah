@@ -6,6 +6,7 @@
 /**From Google fonts*/
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display|Raleway" rel="stylesheet">
 <link type="text/css" href="http://dahi.manoa.hawaii.edu/silence/jplayer/src/skin/pink.flag/scss/jplayer.pink.flag.scss" rel="stylesheet" />
+<link rel="stylesheet" href="http://dahi.manoa.hawaii.edu/silence/fontawesome/css/font-awesome.min.css">
 <script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/lib/jquery.min.js"></script>
 <script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/src/javascript/jplayer/jquery.jplayer.js"></script>
 <script type="text/javascript">
@@ -48,7 +49,7 @@ body
 	text-align: center;
 	font-size: 25px;
 	float: left;
-	width: 375px;
+	width: 40%;
 	opacity: 0.4;
 	margin-top: 25px;
 	position: relative;
@@ -86,16 +87,16 @@ body
 {
 	text-align: center;
 	font-size: 25px;
-	margin-top: 25px;
+	margin-top: 300px;
 	display: inline-block;
-	width: 33%;
+	width: 20%;
 }
 .poemmap-right
 {
 	text-align: center;
 	font-size: 25px;
 	float: right;
-	width: 33%;
+	width: 40%;
 	opacity: 0.4;
 	margin-top: 25px;
 	position: relative;
@@ -156,7 +157,7 @@ body
 {
 	opacity: 1;
 }
-.jp-play, .jp-pause
+.jp-play, .jp-pause, .jp-repeat
 {
 	color: #fdedff;
 	font-family: Raleway;
@@ -174,8 +175,6 @@ body
 	<div id="title">
 
 	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1></div>
-
-	</head>
 	
 		<div class="currentpoem-left">
 			<button class="currentpoem-button fade-in">C u r r e n t</button>
@@ -214,10 +213,13 @@ body
 		</div>
 		<div id="jquery_jplayer_1"></div>
 		<div class="poemaudio-center fade-in" id="jp_container_1">
-	 		<a href="#" class="jp-play">P L A Y</a>
-			<a href="#" class="jp-pause">P A U S E</a>
+	 		<a href="#" class="jp-play">
+	 			<i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
+			<a href="#" class="jp-pause">
+				<i class="fa fa-pause fa-3x" aria-hidden="true"></i></a>
 			<div class="jp-toggles">
-	          	<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+	          	<a href="#" class="jp-repeat">
+	          		<i class="fa fa-repeat" aria-hidden="true"></i></a>
 	       	</div>
 		</div>
 		<div class="poemmap-right">
