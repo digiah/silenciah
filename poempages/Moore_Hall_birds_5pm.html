@@ -14,11 +14,24 @@
    ready: function () {
     $(this).jPlayer("setMedia", {
      mp3: "http://dahi.manoa.hawaii.edu/silence/audio/poems/MoorePoemTrip1.mp3"
-    });
+    }).jPlayer("play");
+   },
+   pause: function() {
+   },
+   play: function() {
+   },
+   ended: function() {
    },
    supplied: "mp3"
   });
  });
+ function replay() {
+ 	$(".jp-replay").fadeToggle("slow", "swing", function() {
+ 		$(".jp-replay").delay(100).fadeToggle("slow", "swing");
+ 	});
+	setTimeout(function(){ 
+ 		$("#jquery_jplayer_1").jPlayer("play", 0); }, 500);
+ }
 </script>
 <style>
 @font-face
@@ -28,13 +41,13 @@
 body
 {
 	background-color: #181617;
-	margin-bottom: 200%;
+	margin-bottom: 100%;
 }
 #pagecontainer
 {
-		min-width: 1000px;
-		background-color: inherit;
-		margin: auto;
+	min-width: 1200px;
+	background-color: inherit;
+	margin: auto;
 }
 #title
 {
@@ -48,6 +61,7 @@ body
 	text-align: center;
 	font-size: 25px;
 	float: left;
+	min-width: 400px;
 	width: 40%;
 	opacity: 0.4;
 	margin-top: 25px;
@@ -59,7 +73,7 @@ body
 	background: inherit;
 	color: peachpuff;
 	border: none;
-	padding: 10px;
+	padding: 0px;
 	font-size: 16px;
 	font-family: Raleway;
 }
@@ -79,7 +93,7 @@ body
 	white-space: pre-wrap;
 	font-family: Playfair Display;
 	text-align: left;
-	padding-left: 5px;
+	padding-left: 15px;
 	font-size: 14px;
 }
 .poemaudio-center
@@ -106,7 +120,7 @@ body
 	background: inherit;
 	color: lightsteelblue;
 	border: none;
-	padding: 16px;
+	padding: 0px;
 	font-size: 16px;
 	font-family: Raleway;
 }
@@ -156,7 +170,7 @@ body
 {
 	opacity: 1;
 }
-.jp-play, .jp-pause, .jp-repeat
+.jp-play, .jp-pause, .jp-replay
 {
 	color: #fdedff;
 	font-family: Raleway;
@@ -202,10 +216,8 @@ body
 	 			<i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
 			<a href="#" class="jp-pause">
 				<i class="fa fa-pause fa-3x" aria-hidden="true"></i></a>
-			<div class="jp-toggles">
-	          	<a href="#" class="jp-repeat">
-	          		<i class="fa fa-repeat" aria-hidden="true"></i></a>
-	       	</div>
+			<a href="#" class="jp-replay" onclick="replay()">
+	         	<i class="fa fa-repeat" aria-hidden="true"></i></a>
 		</div>
 		<div class="poemmap-right">
 			<button class="poemmap-button fade-in">P o e m  &nbsp M a p</button>
