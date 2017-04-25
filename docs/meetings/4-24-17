@@ -1,0 +1,16 @@
+# 4/24/17 Meeting Recap 
+
+**_Main objectives_**: Get playback and autoplay working for poem pages
+
+* As of today's meeting
+  * Replay button working
+  * Autoplay on page load working for poem pages
+  * Updated poem pages uploaded to server and to github [here](https://github.com/digiah/silenciah/tree/master/poempages)
+  
+* **To do**
+  * Link poem pages so that respective page loads after current audio is done 
+  * Create home/landing page 
+  * Add essay link on landing page
+  * Add author info/bio to landing page
+  * Add autoplay option on landing page 
+  * Create option for continuing autoplay on each page 
