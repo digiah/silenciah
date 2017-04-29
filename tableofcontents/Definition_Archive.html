@@ -1,0 +1,322 @@
+<!doctype html>
+
+<html>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display|Raleway" rel="stylesheet">
+<link type="text/css" href="http://dahi.manoa.hawaii.edu/silence/jplayer/src/skin/pink.flag/scss/jplayer.pink.flag.scss" rel="stylesheet" />
+<link rel="stylesheet" href="http://dahi.manoa.hawaii.edu/silence/fontawesome/css/font-awesome.min.css">
+<script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/lib/jquery.min.js"></script>
+<script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/src/javascript/jplayer/jquery.jplayer.js"></script>
+<style>
+@font-face
+{
+	font-family: 'Crimson Text', serif;
+}
+body
+{
+	background-color: #181617;
+	margin-bottom: 50%;
+}
+hr 
+{ 
+  	display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: #a56c63;
+    border-color: #a56c63;
+    background-color: #a56c63;
+}
+strong
+{
+	color: #d8978c;
+}
+#footer
+{
+	font-size: 14px;
+	font-family: Playfair Display;
+	color: #a56c63;
+	white-space: pre-wrap;
+}
+#pagecontainer
+{
+	min-width: 1200px;
+	background-color: inherit;
+	margin: auto;
+}
+#sectiontitle
+{
+	font-size: 20px;
+	font-family: Playfair Display;
+	color: #a56c63;
+	white-space: pre-wrap;
+	margin-top: 25px;
+}
+#title
+{
+	color: antiquewhite;
+	font-size: 200%;
+	text-align: center;
+	font-family: Raleway;
+}
+.tableofcontents
+{
+	text-align: center;
+	font-size: 25px;
+	float: left;
+	margin-left: 30px;
+	min-width: 200px;
+	width: 25%;
+	opacity: 0.4;
+	margin-top: 25px;
+	position: relative;
+	display: inline-block;
+}
+.tableofcontents-button
+{
+	background: inherit;
+	color: peachpuff;
+	border: none;
+	padding: 0px;
+	font-size: 16px;
+	font-family: Raleway;
+}
+.tableofcontents-content
+{
+	display: none;
+	position: relative;
+	background: inherit;
+	box-shadow: none;
+	z-index: 1;
+}
+.tableofcontents-content a
+{
+	color: peachpuff;
+	font-family: Playfair Display;
+	padding: 5px;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+.def_archive 
+{
+	margin-top: 30px;
+	text-align: left;
+	min-width: 500px;
+	width: 45%;
+	position: relative;
+	display: inline-block;
+}
+.def_archive p
+{
+	font-size: 14px;
+	font-family: Playfair Display;
+	color: #a56c63;
+	white-space: pre-wrap;
+}
+.poemmap-right
+{
+	text-align: center;
+	font-size: 25px;
+	float: right;
+	min-width: 200px;
+	width: 25%;
+	opacity: 0.4;
+	margin-top: 25px;
+	position: relative;
+	display: inline-block;
+}
+.poemmap-button
+{
+	background: inherit;
+	color: lightsteelblue;
+	border: none;
+	padding: 0px;
+	font-size: 16px;
+	font-family: Raleway;
+}
+.poemmap-content
+{
+	display: none;
+	position: relative;
+	background: inherit;
+	box-shadow: none;
+	z-index: 1;
+
+}
+.poemmap-content a
+{
+	color: lightsteelblue;
+	font-family: Playfair Display;
+	padding: 5px;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+.sidenavmenu
+{
+	min-width: 200px;
+	width: 5%;
+}
+#sidenavmenu a
+{
+	position: absolute;
+	transition: 0.3s;
+	padding: 10px;
+	width: 200px;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: Raleway;
+}
+.tableofcontents:hover
+{
+	opacity: 1;
+
+}
+.tableofcontents:hover .tableofcontents-content
+{
+	display: block;
+}
+.poemmap-right:hover
+{
+	cursor: pointer;
+	opacity: 1;
+}
+.poemmap-right:hover .poemmap-content
+{
+	display: block;
+}
+
+.fade-in
+{
+	opacity: 0.65;
+	-webkit-transition: opacity 0.5s ease-in;
+}
+.fade-in:hover
+{
+	opacity: 1;
+}
+#startlistening, #doubleright
+{
+	color: #fdedff;
+	font-family: Raleway;
+	font-size: 18px;
+	opacity: 0.5;
+}
+#doubleright:hover 
+{
+	opacity: 0.85;
+}
+#sidenavmenu a:hover
+{
+	left: 0;
+	cursor: pointer;
+	opacity: 1;
+}
+#home
+{
+	top: 150px;
+	left: -70px;
+	color: #ffccc1;
+	background-color: inherit;
+	opacity: 0.5;
+}
+#convolution
+{
+	top: 210px;
+	left: -140px;
+	color: #ffccc1;
+	background-color: inherit;
+	opacity: 0.5;
+}
+
+
+</style>
+<meta charset="UTF-8">
+
+</head>
+<body>
+<div id="pagecontainer">
+	<div id="title">
+
+	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1></div>
+
+	<div class="sidenav" id="sidenavmenu">
+		<a href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Home.html" class="fade-in" id="home">H o m e &nbsp &nbsp
+		<i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+		<a href="#" class="fade-in" id="convolution">C o n v o l u t i o n &nbsp &nbsp<i class="fa fa-music fa-2x" aria-hidden="true"></i></a>
+	</div>
+	<div class="tableofcontents">
+		<button class="tableofcontents-button fade-in">T a b l e &nbsp O f &nbsp C o n t e n t s</button>
+		<div class="tableofcontents-content">
+			<a class= "fade-in" id="def_archive" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Definition_Archive.html">Definition: Archive</a>
+			<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Definition_Silence.html">Definition: Silence</a>
+			<a class= "fade-in" id="def_4D" href="#">Definition: 4D</a>
+			<a class= "fade-in" id="essay" href="#">Essay</a>
+			<a class= "fade-in" id="references" href="#">References</a>
+			<a class= "fade-in" id="appendix" href="#">Appendix: Text Definition of Poems</a>
+		</div>
+	</div>
+	<div class="def_archive">
+		<p id="sectiontitle">Definition: Archive</p>
+
+			<p>
+<strong>archive, n.</strong><sup>1</sup>
+
+Pronunciation:  /ˈɑːkaɪv/ /-kɪv/ 		
+Forms:  <strong>Mostly</strong> in pl.
+Etymology:  &lt French <i>archif, archive</i>, &lt <strong>late</strong> Latin <i>archīum, archīvum</i>, &lt Greek ἀρχεῖον magisterial <strong>residence</strong>, public office, &lt ἀρχή government.					
+
+1. <strong>A place</strong> in which public records or other important historic documents are <strong>kept</strong>. Now only in <i>pl</i>.
+
+1645   J. Howell <i>Epistolæ Ho-elianæ vi. iii. 5  Lubeck, wher the Archifs of their <strong>ancient </strong>Records..<strong>is still</strong></i>.
+1667   <i>Chamberlayne's Magnæ Britanniæ Notitia</i> (1743)  i. iii. x. 217  <i>The Tower of London is <strong>likewise</strong>..the Great Archive where are <strong>conserved</strong> all the ancient records</i>.
+1775   R. Lowth <i>Let.</i> to Warburton 43   <i><strong>Laid</strong> up in the same Archive</i>.
+1777   W. Jones <strong>Poems</strong> &amp Ess. Pref. 13   <i>Preserved <strong>in</strong> the archives of the Royal <strong>Society</strong></i>.
+1866   C. C. Felton Greece, Anc. &amp Mod. II. xi. 209   <i>That <strong>authenticated</strong> copies..should be deposited in the public archives</i>.
+
+2. A <strong>historical</strong> record or document so preserved. Now <strong>chiefly</strong> in <i>pl</i>.
+
+1638   <i>Penit. Conf.</i> (1657) xii. 319   <i>Constitutions..found amongst the Archives at Bennet College</i>.
+1683   Dryden <i><strong>Life</strong> Plutarch</i> 63 in tr. Plutarch <i><strong>Lives</strong></i> I.  <i>He had travell'd over Greece to <strong>peruse</strong> the Archives of <strong>every</strong> City</i>.
+1795   Ld. Auckland in <i>Corr.</i> (1862)  III. 284  <i>Lord St. Helens was obliged to burn all our Hague archives</i>.
+1823   C. Lamb <i>Oxf. in Vacation in Elia</i> 21 <i>Some <strong>rotten</strong> archive, <strong>rummaged </strong> out of some seldom-explored press</i>.
+1863   M. Howitt tr. F. Bremer <i>Greece  Greeks</i> I. i. 19 <i>These inscriptions constitute a portion of the archives of ancient Athens</i>.
+
+3. transf. or fig. in both <strong>senses</strong>.
+
+1603   P. Holland tr. Plutarch Morals 140   <i>These <strong>curious</strong> meddlers..make of their <strong>memorie</strong> a most <strong>unpleasant</strong> Archive or Register</i>.
+1830   C. Lyell <i>Princ. Geol</i>. I. ix. 154  <i>The archives of nature are in <strong>perfect</strong> accordance with historical records</i>.
+1862   T. Carlyle <i>Hist. Friedrich II of Prussia</i> III. xi. ii. 53  <i><strong>So expert</strong> was he, and <strong>a living archive</strong> in that business</i>.
+1878   J. R. Seeley <i>Life Stein III</i>. 421 <i>The Universities, archives of <strong>all the errors</strong> of the age</i>.
+
+Compounds, <i>attrib.</i> and <i>Comb.</i>
+
+1937   <i>Discovery</i> Oct. 323/1  <i><strong>The promotion of</strong> archive science</i>.
+1959   <i>Chambers's Encycl</i>. I. 570/1  <i>Archive <strong>keeping</strong> is <strong>essential</strong> for a civilized <strong>community</strong></i>.</p>
+
+<br>
+<hr>
+
+<p id="footer"><sup>1</sup>"archive, n." OED Online. Oxford University Press, December 2014. Web. 16 December 2014.</p>
+		</div>
+		<div class="poemmap-right">
+			<button class="poemmap-button fade-in">P o e m  &nbsp M a p</button>
+			<div class="poemmap-content">
+				<a class= "fade-in" id="kuy712" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/KUY_712*.html">KUY 712</a>
+				<a class= "fade-in" id="kuystair" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/KUY_stairwell_floors_1-7.html">KUY stairwell, floors 1-7</a>
+				<a class= "fade-in" id="bilger" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Bilger_courtyard.html">Bilger Courtyard</a>
+				<a class= "fade-in" id="hamilton" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Hamilton_Library_stairwell.html">Hamilton Library stairwell</a>
+				<a class= "fade-in" id="sinclair" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Sinclair_Library_reading_room.html">Sinclair Library reading room</a>
+				<a class= "fade-in" id="bachman" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Bachman_Hall_foyer.html">Bachman Hall foyer</a>
+				<a class= "fade-in" id="moore" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Moore_Hall_birds_5pm.html">Moore hall, birds 5pm</a>
+				<a class= "fade-in" id="tesla" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/hypothetical_archive_tesla.html">Hypothetical Archive: Tesla</a>
+			</div>
+		</div>
+</div>
+</body>
+</html>

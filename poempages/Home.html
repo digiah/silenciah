@@ -58,7 +58,7 @@ body
 	text-align: center;
 	font-family: Raleway;
 }
-.currentpoem-left
+.tableofcontents
 {
 	text-align: center;
 	font-size: 25px;
@@ -70,7 +70,7 @@ body
 	position: relative;
 	display: inline-block;
 }
-.currentpoem-button
+.tableofcontents-button
 {
 	background: inherit;
 	color: peachpuff;
@@ -79,7 +79,7 @@ body
 	font-size: 16px;
 	font-family: Raleway;
 }
-.currentpoem-content
+.tableofcontents-content
 {
 	display: none;
 	position: relative;
@@ -87,16 +87,14 @@ body
 	box-shadow: none;
 	z-index: 1;
 }
-.currentpoem-content p
+.tableofcontents-content a
 {
-	display: block;
-	opacity: 0.7;
 	color: peachpuff;
-	white-space: pre-wrap;
 	font-family: Playfair Display;
-	text-align: left;
-	padding-left: 10px;
+	padding: 5px;
 	font-size: 14px;
+	text-decoration: none;
+	display: block;
 }
 .poemaudio-center
 {
@@ -111,6 +109,7 @@ body
 	text-align: center;
 	font-size: 25px;
 	float: right;
+	min-width: 200px;
 	width: 40%;
 	opacity: 0.4;
 	margin-top: 25px;
@@ -144,12 +143,12 @@ body
 	text-decoration: none;
 	display: block;
 }
-.currentpoem-left:hover
+.tableofcontents:hover
 {
 	opacity: 1;
 
 }
-.currentpoem-left:hover .currentpoem-content
+.tableofcontents:hover .tableofcontents-content
 {
 	display: block;
 }
@@ -195,30 +194,15 @@ body
 
 	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1></div>
 	
-		<div class="currentpoem-left">
-			<button class="currentpoem-button fade-in">C u r r e n t</button>
-			<div class="currentpoem-content">
-				<p>
-				In Jean Charlot’s fresco a strung lei lies unfinished
-				in front of dancers’ yellow 
-
-				Security balcony 2nd floor: surprising wheels sound rising
-				inspecting person perched on stair below writing
-
-				me writing radio quiet Celine Dion something singing
-				the softest serenade for people entering the huge doorway
-
-				passing through to door unlock with buzz and pitch.
-				Airflow mostly white walls before the outside 
-
-				flagpole rope ding hitting pole hitting rope.
-				Footsteps quieter louder than Celine more hollow
-
-				and traffic corner outside, intersections.
-				A lei drapes over ʻumeke and pencil and quill
-
-				ulu tree hala tree pahu nui marble staircase
-				this lei stringing silent sounds of administering.</p>
+		<div class="tableofcontents">
+			<button class="tableofcontents-button fade-in">T a b l e &nbsp O f &nbsp C o n t e n t s</button>
+			<div class="tableofcontents-content">
+				<a class= "fade-in" id="def_archive" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Definition_Archive.html">Definition: Archive</a>
+				<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Definition_Silence.html">Definition: Silence</a>
+				<a class= "fade-in" id="def_4D" href="#">Definition: 4D</a>
+				<a class= "fade-in" id="essay" href="#">Essay</a>
+				<a class= "fade-in" id="references" href="#">References</a>
+				<a class= "fade-in" id="appendix" href="#">Appendix: Text Definition of Poems</a>
 			</div>
 		</div>
 		<div class="poemaudio-center">

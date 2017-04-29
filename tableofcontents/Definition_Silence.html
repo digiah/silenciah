@@ -1,0 +1,309 @@
+<!doctype html>
+
+<html>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display|Raleway" rel="stylesheet">
+<link type="text/css" href="http://dahi.manoa.hawaii.edu/silence/jplayer/src/skin/pink.flag/scss/jplayer.pink.flag.scss" rel="stylesheet" />
+<link rel="stylesheet" href="http://dahi.manoa.hawaii.edu/silence/fontawesome/css/font-awesome.min.css">
+<script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/lib/jquery.min.js"></script>
+<script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/src/javascript/jplayer/jquery.jplayer.js"></script>
+<style>
+@font-face
+{
+	font-family: 'Crimson Text', serif;
+}
+body
+{
+	background-color: #181617;
+	margin-bottom: 50%;
+}
+hr 
+{ 
+  	display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: #a56c63;
+    border-color: #a56c63;
+    background-color: #a56c63;
+}
+strong
+{
+	color: #d8978c;
+}
+#footer
+{
+	font-size: 14px;
+	font-family: Playfair Display;
+	color: #a56c63;
+	white-space: pre-wrap;
+}
+#pagecontainer
+{
+	min-width: 1200px;
+	background-color: inherit;
+	margin: auto;
+}
+#sectiontitle
+{
+	font-size: 20px;
+	font-family: Playfair Display;
+	color: #a56c63;
+	white-space: pre-wrap;
+	margin-top: 25px;
+}
+#title
+{
+	color: antiquewhite;
+	font-size: 200%;
+	text-align: center;
+	font-family: Raleway;
+}
+.tableofcontents
+{
+	text-align: center;
+	font-size: 25px;
+	float: left;
+	margin-left: 30px;
+	min-width: 200px;
+	width: 25%;
+	opacity: 0.4;
+	margin-top: 25px;
+	position: relative;
+	display: inline-block;
+}
+.tableofcontents-button
+{
+	background: inherit;
+	color: peachpuff;
+	border: none;
+	padding: 0px;
+	font-size: 16px;
+	font-family: Raleway;
+}
+.tableofcontents-content
+{
+	display: none;
+	position: relative;
+	background: inherit;
+	box-shadow: none;
+	z-index: 1;
+}
+.tableofcontents-content a
+{
+	color: peachpuff;
+	font-family: Playfair Display;
+	padding: 5px;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+.def_archive 
+{
+	margin-top: 30px;
+	text-align: left;
+	min-width: 500px;
+	width: 45%;
+	position: relative;
+	display: inline-block;
+}
+.def_archive p
+{
+	font-size: 14px;
+	font-family: Playfair Display;
+	color: #a56c63;
+	white-space: pre-wrap;
+}
+.poemmap-right
+{
+	text-align: center;
+	font-size: 25px;
+	float: right;
+	min-width: 200px;
+	width: 25%;
+	opacity: 0.4;
+	margin-top: 25px;
+	position: relative;
+	display: inline-block;
+}
+.poemmap-button
+{
+	background: inherit;
+	color: lightsteelblue;
+	border: none;
+	padding: 0px;
+	font-size: 16px;
+	font-family: Raleway;
+}
+.poemmap-content
+{
+	display: none;
+	position: relative;
+	background: inherit;
+	box-shadow: none;
+	z-index: 1;
+
+}
+.poemmap-content a
+{
+	color: lightsteelblue;
+	font-family: Playfair Display;
+	padding: 5px;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+.sidenavmenu
+{
+	min-width: 200px;
+	width: 5%;
+}
+#sidenavmenu a
+{
+	position: absolute;
+	transition: 0.3s;
+	padding: 10px;
+	width: 200px;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: Raleway;
+}
+.tableofcontents:hover
+{
+	opacity: 1;
+
+}
+.tableofcontents:hover .tableofcontents-content
+{
+	display: block;
+}
+.poemmap-right:hover
+{
+	cursor: pointer;
+	opacity: 1;
+}
+.poemmap-right:hover .poemmap-content
+{
+	display: block;
+}
+
+.fade-in
+{
+	opacity: 0.65;
+	-webkit-transition: opacity 0.5s ease-in;
+}
+.fade-in:hover
+{
+	opacity: 1;
+}
+#startlistening, #doubleright
+{
+	color: #fdedff;
+	font-family: Raleway;
+	font-size: 18px;
+	opacity: 0.5;
+}
+#doubleright:hover 
+{
+	opacity: 0.85;
+}
+#sidenavmenu a:hover
+{
+	left: 0;
+	cursor: pointer;
+	opacity: 1;
+}
+#home
+{
+	top: 150px;
+	left: -70px;
+	color: #ffccc1;
+	background-color: inherit;
+	opacity: 0.5;
+}
+#convolution
+{
+	top: 210px;
+	left: -140px;
+	color: #ffccc1;
+	background-color: inherit;
+	opacity: 0.5;
+}
+
+
+</style>
+<meta charset="UTF-8">
+
+</head>
+<body>
+<div id="pagecontainer">
+	<div id="title">
+
+	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1></div>
+
+	<div class="sidenav" id="sidenavmenu">
+		<a href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Home.html" class="fade-in" id="home">H o m e &nbsp &nbsp
+		<i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+		<a href="#" class="fade-in" id="convolution">C o n v o l u t i o n &nbsp &nbsp<i class="fa fa-music fa-2x" aria-hidden="true"></i></a>
+	</div>
+	<div class="tableofcontents">
+		<button class="tableofcontents-button fade-in">T a b l e &nbsp O f &nbsp C o n t e n t s</button>
+		<div class="tableofcontents-content">
+			<a class= "fade-in" id="def_archive" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Definition_Archive.html">Definition: Archive</a>
+			<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Definition_Silence.html">Definition: Silence</a>
+			<a class= "fade-in" id="def_4D" href="#">Definition: 4D</a>
+			<a class= "fade-in" id="essay" href="#">Essay</a>
+			<a class= "fade-in" id="references" href="#">References</a>
+			<a class= "fade-in" id="appendix" href="#">Appendix: Text Definition of Poems</a>
+		</div>
+	</div>
+	<div class="def_archive">
+		<p id="sectiontitle">Definition: Silence</p>
+
+			<p>
+<strong>silence, n.</strong><sup>2</sup>
+
+Pronunciation: /ˈsaɪləns/ 		
+Forms:  ME–15 scilence, ME–15 scylence, 15 scylens; ME cilence; ME sylens(e, 15 Sc. silens, ME–15 sylence, ME– silence.
+Etymology:  &lt Old French <i>silence, scilence</i>, &lt Latin <i>silentium</i>, &lt <i>silēre</i> to be silent: <strong>compare</strong> Provençal <i>silenci</i>, Spanish <i>silencio</i>, Portuguese <i>silencio</i>, Italian <i>silenzio</i>				
+
+2. a. <strong>The state</strong> or condition <strong>when nothing</strong> is audible; <strong>absence</strong> of all sound or noise; <strong>complete</strong> quietness or stillness; noiselessness. <strong>Sometimes</strong> personified. <strong>Also</strong> const. of (<strong>the night</strong>, etc.).
+
+▸a1382   <i>Bible (Wycliffite, E.V.)</i> 	(Douce 369(1)) (1850) Isa. viii. 6 <strong>The watris</strong> of Siloe, that <strong>gon</strong> with cilence.
+1398   J. Trevisa tr. Bartholomew de Glanville <i>De Proprietatibus Rerum</i> (1495) x. ii. 27 b, <i><strong>Derknesse</strong> is seen yf noo thynge is seen, &amp scylence <strong>is knowen yf</strong> noo thynge is herde</i>.
+▸?a1513   W. Dunbar <i><strong>Poems</strong></i> (1998) 114 <i>Lucina schyning in <strong>silence</strong> of the nycht</i>.
+1590   Spenser <i>Faerie Queene</i> iii. i. sig. Cc5, <i><strong>Whenas all the world</strong> in silence deepe <strong>Yshrowded was</strong></i>.
+1604   Shakespeare Hamlet ii. ii. 487  But <strong>as we often</strong> see against some <strong>storme</strong>, A silence in the heauens.
+1645   Milton <i>Upon Circumcision in Poems</i> 21 <<i>strong>Through the soft</strong> silence of the list'ning night</i>.
+1737   J. Wesley &amp C. Wesley Coll. <strong>Psalms</strong> &amp Hymns 70 Fair Queen of Silence, Silver Moon.
+1785   W. Cowper <i>Task</i> vi. 84 <i>Stillness, accompanied with <strong>sounds</strong> so soft, Charms <strong>more than</strong> silence</i>.
+1832   Macaulay <i>Armada</i> 49 <i>Then bugle's <strong>note</strong> and cannon's roar <strong>the deathlike</strong> silence broke</i>.
+1850   Tennyson <i>In Memoriam</i> xix. 32 <i>There twice a day the Severn fills..And <strong>makes</strong> a silence in <strong>the hills</strong></i>.
+1878   R. Browning <i>La Saisiaz</i> 25 <i>Can I..<strong>sharpen ear</strong> to recognize Sound o'er league and league of silence?</i></p>
+
+<br>
+<hr>
+
+<p id="footer"><sup>2</sup> "silence, n." OED Online. Oxford University Press, December 2014. Web. 16 December 2014.
+</p>
+		</div>
+		<div class="poemmap-right">
+			<button class="poemmap-button fade-in">P o e m  &nbsp M a p</button>
+			<div class="poemmap-content">
+				<a class= "fade-in" id="kuy712" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/KUY_712*.html">KUY 712</a>
+				<a class= "fade-in" id="kuystair" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/KUY_stairwell_floors_1-7.html">KUY stairwell, floors 1-7</a>
+				<a class= "fade-in" id="bilger" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Bilger_courtyard.html">Bilger Courtyard</a>
+				<a class= "fade-in" id="hamilton" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Hamilton_Library_stairwell.html">Hamilton Library stairwell</a>
+				<a class= "fade-in" id="sinclair" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Sinclair_Library_reading_room.html">Sinclair Library reading room</a>
+				<a class= "fade-in" id="bachman" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Bachman_Hall_foyer.html">Bachman Hall foyer</a>
+				<a class= "fade-in" id="moore" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Moore_Hall_birds_5pm.html">Moore hall, birds 5pm</a>
+				<a class= "fade-in" id="tesla" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/hypothetical_archive_tesla.html">Hypothetical Archive: Tesla</a>
+			</div>
+		</div>
+</div>
+</body>
+</html>
