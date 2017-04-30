@@ -1,0 +1,303 @@
+<!doctype html>
+
+<html>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Playfair+Display|Raleway" rel="stylesheet">
+<link type="text/css" href="http://dahi.manoa.hawaii.edu/silence/jplayer/src/skin/pink.flag/scss/jplayer.pink.flag.scss" rel="stylesheet" />
+<link rel="stylesheet" href="http://dahi.manoa.hawaii.edu/silence/fontawesome/css/font-awesome.min.css">
+<script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/lib/jquery.min.js"></script>
+<script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/src/javascript/jplayer/jquery.jplayer.js"></script>
+<style>
+@font-face
+{
+	font-family: 'Crimson Text', serif;
+}
+blockquote
+{
+	font-size: 14px;
+	font-family: Playfair Display;
+	color: #a56c63;
+	white-space: pre-wrap;
+}
+body
+{
+	background-color: #181617;
+	margin-bottom: 60%;
+}
+hr 
+{ 
+  	display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color: #a56c63;
+    border-color: #a56c63;
+    background-color: #a56c63;
+}
+#pagecontainer
+{
+	min-width: 1200px;
+	background-color: inherit;
+	margin: auto;
+}
+#sectiontitle
+{
+	font-size: 20px;
+	font-family: Playfair Display;
+	color: #a56c63;
+	white-space: pre-wrap;
+	margin-top: 25px;
+}
+#title
+{
+	color: antiquewhite;
+	font-size: 200%;
+	text-align: center;
+	font-family: Raleway;
+}
+.tableofcontents
+{
+	text-align: center;
+	font-size: 25px;
+	float: left;
+	margin-left: 30px;
+	min-width: 200px;
+	width: 25%;
+	opacity: 0.4;
+	margin-top: 25px;
+	position: relative;
+	display: inline-block;
+}
+.tableofcontents-button
+{
+	background: inherit;
+	color: peachpuff;
+	border: none;
+	padding: 0px;
+	font-size: 16px;
+	font-family: Raleway;
+}
+.tableofcontents-content
+{
+	display: none;
+	position: relative;
+	background: inherit;
+	box-shadow: none;
+	z-index: 1;
+}
+.tableofcontents-content a
+{
+	color: peachpuff;
+	font-family: Playfair Display;
+	padding: 5px;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+.def_archive 
+{
+	margin-top: 30px;
+	text-align: left;
+	min-width: 500px;
+	width: 45%;
+	position: relative;
+	display: inline-block;
+}
+.def_archive p
+{
+	font-size: 14px;
+	font-family: Playfair Display;
+	color: #a56c63;
+	white-space: pre-wrap;
+}
+.poemmap-right
+{
+	text-align: center;
+	font-size: 25px;
+	float: right;
+	min-width: 200px;
+	width: 25%;
+	opacity: 0.4;
+	margin-top: 25px;
+	position: relative;
+	display: inline-block;
+}
+.poemmap-button
+{
+	background: inherit;
+	color: lightsteelblue;
+	border: none;
+	padding: 0px;
+	font-size: 16px;
+	font-family: Raleway;
+}
+.poemmap-content
+{
+	display: none;
+	position: relative;
+	background: inherit;
+	box-shadow: none;
+	z-index: 1;
+
+}
+.poemmap-content a
+{
+	color: lightsteelblue;
+	font-family: Playfair Display;
+	padding: 5px;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+.sidenavmenu
+{
+	min-width: 200px;
+	width: 5%;
+}
+#sidenavmenu a
+{
+	position: absolute;
+	transition: 0.3s;
+	padding: 10px;
+	width: 200px;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: Raleway;
+}
+.tableofcontents:hover
+{
+	opacity: 1;
+
+}
+.tableofcontents:hover .tableofcontents-content
+{
+	display: block;
+}
+.poemmap-right:hover
+{
+	cursor: pointer;
+	opacity: 1;
+}
+.poemmap-right:hover .poemmap-content
+{
+	display: block;
+}
+
+.fade-in
+{
+	opacity: 0.65;
+	-webkit-transition: opacity 0.5s ease-in;
+}
+.fade-in:hover
+{
+	opacity: 1;
+}
+#startlistening, #doubleright
+{
+	color: #fdedff;
+	font-family: Raleway;
+	font-size: 18px;
+	opacity: 0.5;
+}
+#doubleright:hover 
+{
+	opacity: 0.85;
+}
+#sidenavmenu a:hover
+{
+	left: 0;
+	cursor: pointer;
+	opacity: 1;
+}
+#home
+{
+	top: 150px;
+	left: -70px;
+	color: #ffccc1;
+	background-color: inherit;
+	opacity: 0.5;
+}
+#convolution
+{
+	top: 210px;
+	left: -140px;
+	color: #ffccc1;
+	background-color: inherit;
+	opacity: 0.5;
+}
+
+
+</style>
+<meta charset="UTF-8">
+
+</head>
+<body>
+<div id="pagecontainer">
+	<div id="title">
+
+	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1></div>
+
+	<div class="sidenav" id="sidenavmenu">
+		<a href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Home.html" class="fade-in" id="home">H o m e &nbsp &nbsp
+		<i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
+		<a href="#" class="fade-in" id="convolution">C o n v o l u t i o n &nbsp &nbsp<i class="fa fa-music fa-2x" aria-hidden="true"></i></a>
+	</div>
+	<div class="tableofcontents">
+		<button class="tableofcontents-button fade-in">T a b l e &nbsp O f &nbsp C o n t e n t s</button>
+		<div class="tableofcontents-content">
+			<a class= "fade-in" id="def_archive" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Definition_Archive.html">Definition: Archive</a>
+			<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Definition_Silence.html">Definition: Silence</a>
+			<a class= "fade-in" id="def_4D" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Definition_4D.html">Definition: 4D</a>
+			<a class= "fade-in" id="essay" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Essay.html">Essay</a>
+			<a class= "fade-in" id="references" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/References.html">References</a>
+			<a class= "fade-in" id="appendix" href="http://dahi.manoa.hawaii.edu/silence/tableofcontents/Appendix.html">Appendix: Text Definition of Poems</a>
+		</div>
+	</div>
+	<div class="def_archive">
+		<p id="sectiontitle">Essay</p>
+
+			<p>
+	Poets have to be experts in any number of guises in order to write poetry: if the intent is to relay experience, however broadly conceived, then poets must demonstrate their deep involvement with their topic, or form, or figurative stylings, in order to seem authoritative.  Lyrical poetry, which emphasizes subjective experience, confers instant expertise regardless of a poem’s parameters, as writing about oneself should not require much additional research.  However, the particular poetic framework a poet chooses - traditional or experimental poetic form, accessible or abstract metaphor, linear or nonlinear progression - creates a sense of expectation that the poet must live up to in order to be convincing.  It is appropriate, in other words, to use a sonnet to discuss love, because that form has become highly associated with love poetry, but it is less appropriate to use arcane English, as if to imitate Shakespeare, to do so - unless there is some rationale for doing so that the poem itself makes evident.  Similarly, the choice of metaphor, and the decision to extend or curtail metaphor as a poem progresses, indicate the range and depth of a poet’s frame of reference.  A sonnet about love represented as a muse is expected; a poem which replaces the muse with computer code, or a blue whale, or the law of averages, is unexpected.  The unexpected can take the reader somewhere new, or it can take the reader to a familiar place via a hidden route.  The first type of poetry might be avante garde in nature - Beat poetry, with its concern for externalizing consciousness, or Pound’s <i>Cantos’</i> obsessive rumination of memory - while the second type of poetry might be formalist such as a sestina by Elizabeth Bishop, obsessively modifying the same image for emerging ends.
+
+	Inasmuch as fulfilling poetry exists along these axes (new/old route to expected/unexpected meaning), any given poem is not merely a set of coordinates.  The most difficult aspect of poetry to analyze critically is the intensity of feeling it conveys, in large part because readers’ responses will vary depending on who the actual reader is.  A poem may, then, filter an experience through poetic strata, but whether the water is clear or muddy at the other end will depend on reader taste.  And while one can argue than any poem which records some happening, instead of being merely logical, has archived that experience, the poem is subject to a kind of evaluation which other archival materials usually are not; namely, does the reader <i>like</i> the poem?  
+
+	Thus, it may be an overstatement to say that a poem is an archive, or a poetry collection is an archive of source poems, precisely because artistic endeavors are subject to analysis by utility, innovation, and taste, all of which contribute to determining poetry’s significance.  Yet, poetry offers the self archival opportunities: recording experience, recalling experience, and reflecting on experience.  If the analogy of archive is not perfect, then it certainly still creates a beneficial thought experiment that complements, or competes with, the understanding of poetry as an purely aesthetic, or purely political, end.  An emerging genre of poetry intends to make recording and recalling experience more obvious than lyrical poetry tends to do.  Documentary poetry is so called because it is generated by found texts which are presented and mined for significant language.  Donovan Kuhiō Colleps, for example, includes text from a defibrillator instruction manual when writing about his grandfather’s terminal illness in <i>Proposed Additions</i>, while Stephen Collis writes about the economics of land tenure in <i>The Commons</i> by manipulating text from Thoreau’s essays <i>Wild Fruits</i> and <i>Walden and Civil Disobedience</i>.  In both cases, the poets have woven a document’s text in with their own, although with different amounts of authorial insertion.  Mark Nowak’s collection <i>Coal Mountain Elementary</i>, in contrast, is entirely sourced from government and corporate documents relating to mining regulation.  Martin Earl describes the result as trying to “eliminate, to the extent that this is possible, ‘self expression’ from the equation” (“Documentary Poetry”) in the pursuit of poetry which is overtly political, but not also confessional in the tradition of Amiri Baraka or Haunani Kay Trask.  By backgrounding their internal poetic intentions behind external documents (or at least presenting them side-by-side), these poets not only present their concerns, but they also actually record texts of the world around them.  Effectively, the research isn’t in the poetry because the research is the poetry. 
+
+	The challenge for documentary poetry is its practitioners’ reliance on physical texts such as paper documents, photographs, and other visual media that can be reproduced on the page.  (Film and video, or their digital analogs, are used by a small number of poets producing spoken word poetry videos.)  What can be documented is what can be purposely obtained, stumbled upon, or otherwise encountered; and, what can be documented can then be manipulated to produce alternate texts and parallel commentaries.  Using documents that are accessible by other senses, such as sound or taste, present profound challenges to this poetic.  Even music, which is so tightly whorled within poetry history and poetic forms, is usual present through its lyrics.  Asserting that a poem is reproducing musical sequences in its prosodic structure - and that such a project is intentionally involved in documenting a musical experience, rather than creating an original one - risks a greater amount of interpretive pushback, depending on who is reading the poem. 
+
+	It may well be that poets will be able to overcome these sensory thresholds as they continue to explore the sorts of texts that exist, influence, and immerse readers in sociocultural experience.  That fact of threshold, though, creates a link with other disciplines which explore sensory experience and sensory history.  I am interested in silence because, in my experience, readers of poetry tend to think that poets write or compose poems in order for them to be read out loud.  The orality of poetry is certainly a robust feature of its historical origins, when poetry was a communal experience of recitation, song, and, crucially, improvisation (Lord).  Before writing systems, or before widespread literacy, poem composition was generally spoken in nature, just as its performance was spoken.  Literacy, however, affords the audience to experience the poetry either on the page, or aloud, whether by reading aloud or hearing - or seeing - oral performances.  Similarly, poets can compose poems silently by writing them, rather than working through lines by speaking them and, in turn, memorizing them.  I fall into this modern category: rarely do I ever compose a poem orally, or even mix writing and speaking while composing.  Usually the first time I say any of the words aloud is when I am practising to recite a poem, and occasionally that practice will lead to localized revisions of a word or line.  My lack of reliance on speaking in composition does, though, mean that composition is a silent, or not oral, process in which I don’t hear words’ sounds as I decide on which to make use of.  The research on phonetic and phonological processing constitutes an extensive body of literature which would be impossible to summarize here, but a few key insights are especially relevant to my interest in silence and poetry as a vehicle for approaching it.  For hearing people, linguistic processing always involves sound, even if it is internal (and, potentially for nonhearing people too; see Garde and Cowey).  In fact, a reader’s learned skill at hearing may predict the ease of achieving reading fluency: the stronger one’s auditory processing, the more likely one is to read fluently at an earlier age (Sprenger-Charolles et al.).  Speech production also involves the regions of the brain that are used in speech perception, i.e., hearing (Price et al.).  As speech production can be oral or written, hearing - or the memory of hearing, the accumulated experiences of hearing - are present in every written text, and thus, every silently composed poem.  
+
+	While silence is clearly not a feature of linguistic processing (which is not to say that all thought is linguistic), or at least one whose perceptual complications make simple distinctions between speech and writing problematic, it is a feature of the cultural experience of language and the hearing of language.  A good child is seen but not heard; silence allows for being able to hear oneself think.  In these aphorisms, silence is virtuous, whether because it indexes obedience, or clarity.  Yet,  if one has nothing to say, say nothing; in this case, silence is a cue for lack of intelligence.  What constitutes “nothing” is contextual: it could be anything at all, or it could be utterances which meet definite criteria for the authority to speak.  In this latter case, speaking or not speaking correctly echoes, modern political philosophical analyses regarding language as an arbiter of political life (Agamben), based on Aristotle’s distinctions between meaningful and unmeaningful articulation.  Poets routinely demonstrate that having something to say is an expression which extends beyond actual speech to the production of any composition, yet poetic output is validated by oral readings.  While those occasions affirm poetry as a collective experience, they do not address poetry as an individual experience, a reader’s experience, an observably silent experience.  
+
+	The challenges of understanding silence as absence of sound, or meaningful sound, or noise, exist for the the historian of sound as well as for the poet or literary theorist.  Michel-Rolph Trouillot discusses silence as an obstacle to historical representation, especially when the community in question is notable for having been silenced, politically.  Trouillot understands silence as an unavoidable part of a historian’s work, which navigates truth via available records (26-7).  He also sees patterns of silences, or silencings, as records which are not material: instead of being proof of events, they are proving behavioral tendencies.  Understanding the production of silence, in other words, is part of understanding the nature of silence.  Records, as technologies of documentation that necessarily involve an economy of materials, time, and purpose, play crucial roles in gesturing to information that is not recorded.  That silent information, from an historical standpoint, speaks volumes, yet cannot be analyzed with certainty.
+
+	Archives of historical documents thus contain within themselves archives of silence, although the archive that one scholar finds may turn out to be different than the archive of another scholar, even given the same source material.  This multiplicity of silent outcomes is a direct effect of the uncertainty of historical reconstruction, and it uncannily mirrors the effect of uncertainty in our understanding of the physical world.  We cannot know what speaks for itself and what cannot speak for itself at the same time, just as we cannot know if Schrodinger will be able to feed his cat dinner, post box experiment.  At the same time such uncertainty destabilizes, it strengthens a poet’s ability to do the work of making poems, which Seamus Heaney describes thusly about poems that “give [him] the right to speak”: </p>
+		<blockquote>poetry as divination, poetry as revelation of the self to the self, as restoration of the culture to itself; poems as elements of continuity, with the aura and authenticity of archeological finds, where the buried shard has an importance that is not diminished by the importance of the buried city; poetry as a dig, a dig for finds that end up being plants” (15).</blockquote>
+<p>That Heaney’s metaphor resolves into archeology supports my thinking about history, as archeology and history seem each to be special cases of a concern for human evidence - one deals with materials that survive robustly, such as ceramics, while the other deals with more fragile media such as paper.  Neither discipline can ascertain feelings, thoughts, or interactions that aren’t directly present, or available through cautious inference.  The poet, on the other hand, can fill in the blanks, can wonder, can surmise and suppose for the benefit of interpretation, whether by carving up a document, or imagining the hills of Ireland as a bog queen who might point the way to political reconciliation.  
+
+	Poetry then, also archives feelings - the feelings of the poet, and the possible feelings available to the reader through poem.  Ann Cvetkovich argues for the importance of this archival function in her analysis of trauma, <i>An Archive of Feelings</i>, suggesting that the therapeutic value of expression is necessary for healing from trauma, yet such expression is denied to the socially marginalized, such as people who identify as LGBT, and women.  Cvetkovich advocates that records of traumatic experiences should be made public as oral or visual history so that communities can confront, and change, the conditions that produce trauma.  (Notably, a feeling archive, for Cvetkovich, is intentionally not silent to counteract silencing.)  I agree with her position, and I support her charge that feelings resulting from trauma should be taken seriously in their diversity, and the diverse populace that they come from.  I also suggest that poets have continuously engaged with her directive of archiving and reflecting on feelings, from Alexander Pope’s cynically funny satire <i>Dunciad</i> to the Romantic poets’ concern with transcendent experience, to Thomas Hardy’s melancholic pastoral poetry or Sylvia Plath’s groundbreaking poetry about her depression - among countless other examples.  
+
+	In composing these poems, then I have attempted to weave together these various meanings of archive and silence into reflections on how I have experienced silence in specific locations on a university campus.  Universities are places of learning and exchange, yet disciplinary specialization often prevents or hinders scholarly intelligibility between disciplines.  Claims to understanding, truth, or authority are made by relying on bodies of literature which are delimited: linguists, rhetoricians, and philosophers of language, for example, can investigate the question of a text’s effect on its readers using different and potentially discrete bodies of literature, resulting in the potential for three different sets of conclusions.  While the opportunity to pursue research in the guise that one is most interested in is integral to the democratic nature of the academy, undertaking and successfully completing interdisciplinary research become more challenging when fundamental tenets of scholarship require negotiation, such as terminology and methodology.  Yet, ss intellectual crossroads, these negotiations present opportunities to create scholarship that achieves both nuanced and wide ranging insight.  I am particularly interested in the challenges of interdisciplinary work because as a teacher of undergraduates I operate under the assumption that my students will leave the classroom needing to integrate my teaching (if I’ve done it well) with the knowledge relevant to the rest of their lives - be it biology, accounting, or ethnic studies.  In hoping to model the holism of everyday experience, then, effective interdisciplinary research accounts for complexity rather than ignoring it.  
+
+	The poems’ settings, subjects, and formal aspects all work to represent the experience of silence.  The poems are set in typical university settings - libraries, offices, and outdoor public spaces - and therefore comprise an archive of my experiences writing the actual poems <i>en plein air</i>.  Sounds and silences are explicitly addressed or considered in each poem as they occurred <i>in situ</i>, and each poem presents different formal tools for representing my hearing experience.  Gerunds indicate the importance of progression to a hearing event (an analogue for a sound’s envelope, but one which can include the instrument of a sound), while complex compounds detail the sequences of progressive actions that result in hearing, and which necessarily include other sensory information, such as sight.  Phrasal repetition signifies tempo or sonic recurrence, as in “Sinclair Library reading room”, while it signifies the influence of memory on sensory experience in “Moore Hall, birds 5pm”.  In “Bilger Hall courtyard” and “Bachman Hall foyer” I have attended also to specifically visual details of the space at hand, and wound up attaching my sonic experience to speculation about history or affect.  In contrast, “KUY 712*”, “KUY stairwell, floors 1-7”, and “Hamilton Library stairwell” all struggle, and ultimately fail, to divorce my hearing of a sound, and the description of that sound, from other sensory or intellectual paradigms for understanding that sound.  I have chosen to be either detailed or expansive about representing my experience of these spaces, while I have always attempted to be fully present and attentive to hearing perceptively in each space.  Finally, the introductory definition poems and the conclusory hypothetical poem frame the hearing poems with an amount, but certainly not a determinate or adequate amount, of information and questioning.  The definition poems are constructed as found poems, wherein a poetic text is overlaid, or taken from, the language of another document, in this case, entries from the Oxford English Dictionary and Wikipedia entries - both sources whose content is the product of different approaches to composition and redaction.  I hope that the collection in its entirely words such that the poems resonate long and loudly with the scholarly and poetic concepts that generated them. </p>
+		</div>
+		<div class="poemmap-right">
+			<button class="poemmap-button fade-in">P o e m  &nbsp M a p</button>
+			<div class="poemmap-content">
+				<a class= "fade-in" id="kuy712" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/KUY_712*.html">KUY 712</a>
+				<a class= "fade-in" id="kuystair" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/KUY_stairwell_floors_1-7.html">KUY stairwell, floors 1-7</a>
+				<a class= "fade-in" id="bilger" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Bilger_courtyard.html">Bilger Courtyard</a>
+				<a class= "fade-in" id="hamilton" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Hamilton_Library_stairwell.html">Hamilton Library stairwell</a>
+				<a class= "fade-in" id="sinclair" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Sinclair_Library_reading_room.html">Sinclair Library reading room</a>
+				<a class= "fade-in" id="bachman" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Bachman_Hall_foyer.html">Bachman Hall foyer</a>
+				<a class= "fade-in" id="moore" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/Moore_Hall_birds_5pm.html">Moore hall, birds 5pm</a>
+				<a class= "fade-in" id="tesla" href="http://dahi.manoa.hawaii.edu/silence/audio/poempages/hypothetical_archive_tesla.html">Hypothetical Archive: Tesla</a>
+			</div>
+		</div>
+</div>
+</body>
+</html>
