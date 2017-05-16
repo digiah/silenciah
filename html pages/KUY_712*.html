@@ -78,8 +78,9 @@ body
 	color: peachpuff;
 	border: none;
 	padding: 0px;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: Raleway;
+	font-weight: bold;
 }
 .currentpoem-content
 {
@@ -103,12 +104,22 @@ body
 .poemaudio-center
 {
 	text-align: center;
-	font-size: 25px;
-	margin-top: 300px;
 	display: inline-block;
 	position: relative;
 	min-width: 100px;
-	width: 20%
+	width: 20%;
+	margin-top: 25px;
+}
+.poemaudio-center p
+{
+	font-size: 18px;
+	font-family: Playfair Display;
+	color: #ffdbe6;
+	opacity: 0.7;
+}
+.poemaudio-center i
+{
+	margin-top: 300px;
 }
 .poemmap-right
 {
@@ -129,8 +140,9 @@ body
 	color: lightsteelblue;
 	border: none;
 	padding: 0px;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: Raleway;
+	font-weight: bold;
 }
 .poemmap-content
 {
@@ -186,8 +198,8 @@ body
 
 .fade-in
 {
-	opacity: 0.65;
-	-webkit-transition: opacity 0.5s ease-in;
+	opacity: 0.5;
+	transition: opacity 0.5s ease-in;
 }
 .fade-in:hover
 {
@@ -235,7 +247,7 @@ body
 		<div class="sidenav" id="sidenavmenu">
 			<a href="http://dahi.manoa.hawaii.edu/silence/index.html" class="fade-in" id="home">H o m e &nbsp &nbsp
 			<i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
-			<a href="#" class="fade-in" id="convolution">C o n v o l u t i o n &nbsp &nbsp<i class="fa fa-music fa-2x" aria-hidden="true"></i></a>
+			<a href="http://dahi.manoa.hawaii.edu/silence/Convolution_Home.html" class="fade-in" id="convolution">C o n v o l u t i o n &nbsp &nbsp<i class="fa fa-music fa-2x" aria-hidden="true"></i></a>
 		</div>
 		<div class="currentpoem-left">
 			<button class="currentpoem-button fade-in">T r a n s c r i p t</button>
@@ -252,12 +264,13 @@ body
 			</div>
 		</div>
 		<div id="jquery_jplayer_1"></div>
-		<div class="poemaudio-center fade-in" id="jp_container_1">
-	 		<a href="#" class="jp-play">
+		<div class="poemaudio-center" id="jp_container_1">
+	 		<p>KUY 712</p>
+	 		<a href="#" class="jp-play fade-in">
 	 			<i class="fa fa-play fa-3x" aria-hidden="true"></i></a>
-			<a href="#" class="jp-pause">
+			<a href="#" class="jp-pause fade-in">
 				<i class="fa fa-pause fa-3x" aria-hidden="true"></i></a>
-			<a href="#" class="jp-replay" onclick="replay()">
+			<a href="#" class="jp-replay fade-in" onclick="replay()">
 	         	<i class="fa fa-repeat" aria-hidden="true"></i></a>
 		</div>
 		<div class="poemmap-right">
