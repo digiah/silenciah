@@ -1,6 +1,8 @@
 # silenciah
 Archive of Silences
 
+Archive of Silence site: http://dahi.manoa.hawaii.edu/silence/index.html
+
 all the ir files mentioned below are in the same dir structure (/ir/...) mentioned below.  If you want to git clone the repo into your dahi git directory after vncing in, that might be simpler.  You will need to adjust the paths though, including in santalucia.conf.
 
 vnc to dahi
