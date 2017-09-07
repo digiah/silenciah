@@ -1,5 +1,21 @@
+<?php
+
+
+$output = "conv-".$_POST["reverb"]."-".$_POST["filename"];
+
+exec("/usr/local/bin/fconvolver ir/config-files/".$_POST["reverb"].".conf"." ir/input/".$_POST["filename"]." ir/output/".$output);
+
+$error = "";
+
+if (!file_exists("ir/output/".$output)) {
+	$error = "An error occurred during convolution. Not your fault.";
+}
+   
+   
+$sitenames = array("bachman" => "Bachman Hall", "bilger" => "Bilger Hall", "hamilton" => "Hamilton Library", "kuystairwell" => "Kuykendall stairwell", "moore" => "Moore Hall");
+?>
 <!doctype html>
-<!-- remarkable! -->
+
 <html>
 
 <head>
@@ -9,31 +25,13 @@
 <script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/lib/jquery.min.js"></script>
 <script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/src/javascript/jplayer/jquery.jplayer.js"></script>
 <script type="text/javascript">
- $(document).ready(function(){
-  $("#jquery_jplayer_1").jPlayer({
-   ready: function () {
-    $(this).jPlayer("setMedia", {
-     mp3: "http://dahi.manoa.hawaii.edu/silence/audio/poems/bachman\ hall\ outside\ poem.mp3"
-    }).jPlayer("play");
-   },
-   pause: function() {
-   },
-   play: function() {
-   },
-   ended: function() {
-   	setTimeout(function(){
-   		window.location.href = "http://dahi.manoa.hawaii.edu/silence/Moore_Hall_birds_5pm.html"}, 3000);
-   },
-   supplied: "mp3"
-  });
- });
- function replay() {
- 	$(".jp-replay").fadeToggle("slow", "swing", function() {
- 		$(".jp-replay").delay(100).fadeToggle("slow", "swing");
- 	});
-	setTimeout(function(){ 
- 		$("#jquery_jplayer_1").jPlayer("play", 0); }, 500);
- }
+ function listen() {
+	<?php if ($error == ""): ?>
+	document.getElementById("audiopreview").src = "http://dahi.manoa.hawaii.edu/silence/ir/output/<?php echo $output; ?>";
+	document.getElementById("listen").style.display = "block";
+	<?php endif; ?>
+}
+
 </script>
 <style>
 @font-face
@@ -163,6 +161,8 @@ body
 	font-size: 16px;
 	font-family: Raleway;
 }
+
+
 .tableofcontents:hover
 {
 	opacity: 1;
@@ -225,16 +225,50 @@ body
 	opacity: 0.5;
 }
 
+#instructions {
+	color: #fdedff;
+	font-family: Raleway;
+	font-size: 18px;	
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.btn
+{
+	color: peachpuff;
+	border: 1px solid;
+	padding: 10px;
+	font-size: 18px;
+	font-family: Raleway;
+	font-weight: bold;
+}
+
+
+#listen { display: none; }
 
 </style>
 <meta charset="UTF-8">
 
+<title>Archive of Silence: Convolution Results</title>
 </head>
 <body>
 <div id="pagecontainer">
 	<div id="title">
 
-	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1></div>
+	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1>
+    <h2>CON-VOLV-O</h2></div>
 
 		<div class="sidenav" id="sidenavmenu">
 			<a href="http://dahi.manoa.hawaii.edu/silence/index.html" class="fade-in" id="home">H o m e &nbsp &nbsp
@@ -250,14 +284,32 @@ body
 				<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/Definition_Silence.html">Definition: Silence</a>
 				<a class= "fade-in" id="def_4D" href="http://dahi.manoa.hawaii.edu/silence/Definition_4D.html">Definition: 4D</a>
 				<a class= "fade-in" id="essay" href="http://dahi.manoa.hawaii.edu/silence/Essay.html">Essay</a>
+				<a class= "fade-in" id="convolvo" href="#" onclick="if (confirm('Starting over, are you sure?')) { document.location.href='remove.php?filename=<?php echo $newfilename; ?>'; return false; }">Convolute a Sound</a>
 				<a class= "fade-in" id="references" href="http://dahi.manoa.hawaii.edu/silence/References.html">References</a>
 				<a class= "fade-in" id="appendix" href="http://dahi.manoa.hawaii.edu/silence/Appendix.html">Appendix: Text Definition of Poems</a>
 		</div>
 		</div>
-		<div class="poemaudio-center">
-			<p id="startlistening">S T A R T &nbsp L I S T E N I N G</p>
-	 		<a href="http://dahi.manoa.hawaii.edu/silence/KUY_712*.html"id="doubleright">
-	 			<i class="fa fa-angle-double-right fa-3x fade-in" aria-hidden="true"></i></a>
+		<div id="instructions" class="poemaudio-center">
+			<?php if ($error == ""): ?>
+<p>"<?php echo $_POST["filename"]; ?>" convoluted in <strong><?php echo $sitenames[$_POST["reverb"]]; ?></strong></p>
+<p><button class="btn" onclick="listen();">LISTEN</button></p>
+<p id="listen"><iframe id="audiopreview" src="empty.html" style="width: 100%; height: 80px; border: 0px;"></iframe></p>
+<p>Download your file from within the preview frame above.</p>
+<p>NEXT STEPS:</p>
+<p>Don't like what you hear?</p>
+<p><button class="btn" onclick="if (confirm('Are you sure?')) { document.location.href='remove.php?filename=<?php echo $_POST["filename"]; ?>&output=<?php echo $output; ?>'; }">START OVER</button>
+  <br> 
+  (deletes input and output files).</p>
+<p><button class="btn" onclick="document.location.href='convolvo-preview.php?filename=<?php echo $_POST["filename"]; ?>';">CHANGE REVERB</button> 
+  <br>
+  (preserves input file).</p>
+<?php else: ?>
+<p>NEXT STEPS: </p>
+<p><?php echo $error; ?></p>
+<p><button class="btn" onclick="document.location.href='convolvo.php?delete=<?php echo $_POST["filename"]; ?>';">START OVER</button></p>
+
+<?php endif; ?>
+            
 		</div>
 		<div class="poemmap-right">
 			<button class="poemmap-button fade-in">P o e m  &nbsp M a p</button>

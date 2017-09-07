@@ -1,5 +1,6 @@
+<?php if (isset($_GET["delete"]) && file_exists('ir/input/'.$_GET["delete"])) { unlink('ir/input/'.$_GET["delete"]); } ?>
 <!doctype html>
-<!-- remarkable! -->
+
 <html>
 
 <head>
@@ -9,31 +10,7 @@
 <script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/lib/jquery.min.js"></script>
 <script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/src/javascript/jplayer/jquery.jplayer.js"></script>
 <script type="text/javascript">
- $(document).ready(function(){
-  $("#jquery_jplayer_1").jPlayer({
-   ready: function () {
-    $(this).jPlayer("setMedia", {
-     mp3: "http://dahi.manoa.hawaii.edu/silence/audio/poems/bachman\ hall\ outside\ poem.mp3"
-    }).jPlayer("play");
-   },
-   pause: function() {
-   },
-   play: function() {
-   },
-   ended: function() {
-   	setTimeout(function(){
-   		window.location.href = "http://dahi.manoa.hawaii.edu/silence/Moore_Hall_birds_5pm.html"}, 3000);
-   },
-   supplied: "mp3"
-  });
- });
- function replay() {
- 	$(".jp-replay").fadeToggle("slow", "swing", function() {
- 		$(".jp-replay").delay(100).fadeToggle("slow", "swing");
- 	});
-	setTimeout(function(){ 
- 		$("#jquery_jplayer_1").jPlayer("play", 0); }, 500);
- }
+ 
 </script>
 <style>
 @font-face
@@ -163,6 +140,8 @@ body
 	font-size: 16px;
 	font-family: Raleway;
 }
+
+
 .tableofcontents:hover
 {
 	opacity: 1;
@@ -225,16 +204,46 @@ body
 	opacity: 0.5;
 }
 
+#instructions {
+	color: #fdedff;
+	font-family: Raleway;
+	font-size: 18px;	
+}
 
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.btn
+{
+	color: peachpuff;
+	border: 1px solid;
+	padding: 10px;
+	font-size: 18px;
+	font-family: Raleway;
+	font-weight: bold;
+}
 </style>
 <meta charset="UTF-8">
 
+<title>Archive of Silence: Convolution</title>
 </head>
 <body>
 <div id="pagecontainer">
 	<div id="title">
 
-	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1></div>
+	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1>
+    <h2>CON-VOLV-O</h2></div>
 
 		<div class="sidenav" id="sidenavmenu">
 			<a href="http://dahi.manoa.hawaii.edu/silence/index.html" class="fade-in" id="home">H o m e &nbsp &nbsp
@@ -250,14 +259,21 @@ body
 				<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/Definition_Silence.html">Definition: Silence</a>
 				<a class= "fade-in" id="def_4D" href="http://dahi.manoa.hawaii.edu/silence/Definition_4D.html">Definition: 4D</a>
 				<a class= "fade-in" id="essay" href="http://dahi.manoa.hawaii.edu/silence/Essay.html">Essay</a>
+				<a class= "fade-in" id="convolvo" href="http://dahi.manoa.hawaii.edu/silence/convolvo.php">Convolute a Sound</a>
 				<a class= "fade-in" id="references" href="http://dahi.manoa.hawaii.edu/silence/References.html">References</a>
 				<a class= "fade-in" id="appendix" href="http://dahi.manoa.hawaii.edu/silence/Appendix.html">Appendix: Text Definition of Poems</a>
 		</div>
 		</div>
-		<div class="poemaudio-center">
-			<p id="startlistening">S T A R T &nbsp L I S T E N I N G</p>
-	 		<a href="http://dahi.manoa.hawaii.edu/silence/KUY_712*.html"id="doubleright">
-	 			<i class="fa fa-angle-double-right fa-3x fade-in" aria-hidden="true"></i></a>
+		<div id="instructions" class="poemaudio-center">
+			<p>Starting here you can upload an audio file and, via convolution, "place" it in any of the spaces that the poems were recorded in.</p>
+            <p>STEP 1: Upload a WAV file.</p>
+            <div class="upload-btn-wrapper"></div>
+	 		<form name="uploadaudio" id="uploadaudio" enctype="multipart/form-data" method="post" action="convolvo-preview.php">
+            <input name="soundinput" id="soundinput" class="btn" type="file" /><br /><br>
+<button onclick='document.forms[0].submit();' class="btn" >UPLOAD</button>
+
+</form>
+
 		</div>
 		<div class="poemmap-right">
 			<button class="poemmap-button fade-in">P o e m  &nbsp M a p</button>
