@@ -1,5 +1,19 @@
+<?php
 
-<?php if (isset($_GET["delete"]) && file_exists('ir/input/'.$_GET["delete"])) { unlink('ir/input/'.$_GET["delete"]); } ?>
+
+$output = "conv-".$_POST["reverb"]."-".$_POST["filename"];
+
+exec("/usr/local/bin/fconvolver ir/config-files/".$_POST["reverb"].".conf"." ir/input/".$_POST["filename"]." ir/output/".$output);
+
+$error = "";
+
+if (!file_exists("ir/output/".$output)) {
+	$error = "An error occurred during convolution. Not your fault.";
+}
+   
+   
+$sitenames = array("bachman" => "Bachman Hall", "bilger" => "Bilger Hall", "hamilton" => "Hamilton Library", "kuystairwell" => "Kuykendall stairwell", "moore" => "Moore Hall");
+?>
 <!doctype html>
 
 <html>
@@ -12,7 +26,11 @@
 <script type="text/javascript" src="http://dahi.manoa.hawaii.edu/silence/jplayer/src/javascript/jplayer/jquery.jplayer.js"></script>
 <script type="text/javascript">
  function listen() {
-	}
+	<?php if ($error == ""): ?>
+	document.getElementById("audiopreview").src = "http://dahi.manoa.hawaii.edu/silence/ir/output/<?php echo $output; ?>";
+	document.getElementById("listen").style.display = "block";
+	<?php endif; ?>
+}
 
 </script>
 <style>
@@ -80,16 +98,17 @@ body
 }
 .poemaudio-center
 {
-	margin-top: 30px;
 	text-align: center;
+	font-size: 25px;
+	margin-top: 30px;
+	display: inline-block;
+	position: relative;
 	min-width: 500px;
 	width: 45%;
-	position: relative;
-	display: inline-block;
 }
 .poemaudio-center p
 {
-	margin-top: 80px;
+	margin-top: 10px;
 }
 .poemmap-right
 {
@@ -154,8 +173,6 @@ body
 	font-size: 16px;
 	font-family: Raleway;
 }
-
-
 .tableofcontents:hover
 {
 	opacity: 1;
@@ -217,19 +234,16 @@ body
 	background-color: inherit;
 	opacity: 0.5;
 }
-
 #instructions {
 	color: #fdedff;
 	font-family: Playfair Display;
 	font-size: 16px;	
 }
-
 .upload-btn-wrapper {
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
-
 .upload-btn-wrapper input[type=file] {
   font-size: 100px;
   position: absolute;
@@ -237,7 +251,6 @@ body
   top: 0;
   opacity: 0;
 }
-
 .btn
 {
 	background: #ff936a;
@@ -251,19 +264,19 @@ body
 }
 
 
+
 #listen { display: none; }
 
 </style>
 <meta charset="UTF-8">
 
-<title>Archive of Silence: Convolution Preview</title>
+<title>Archive of Silence: Convolution Results</title>
 </head>
 <body>
 <div id="pagecontainer">
 	<div id="title">
 
-	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1>
-    </div>
+	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1></div>
 
 		<div class="sidenav" id="sidenavmenu">
 			<a href="http://dahi.manoa.hawaii.edu/silence/index.html" class="fade-in" id="home">H o m e &nbsp &nbsp
@@ -279,22 +292,34 @@ body
 				<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/Definition_Silence.html">Definition: Silence</a>
 				<a class= "fade-in" id="def_4D" href="http://dahi.manoa.hawaii.edu/silence/Definition_4D.html">Definition: 4D</a>
 				<a class= "fade-in" id="essay" href="http://dahi.manoa.hawaii.edu/silence/Essay.html">Essay</a>
-				<a class= "fade-in" id="convolvo" href="#" onclick="if (confirm('Starting over, are you sure?')) { document.location.href='remove.php?filename=-1505003660.wav'; return false; }">Convolute a Sound</a>
+				<a class= "fade-in" id="convolvo" href="#" onclick="if (confirm('Starting over, are you sure?')) { document.location.href='remove.php?filename=<?php echo $newfilename; ?>'; return false; }">Convolute a Sound</a>
 				<a class= "fade-in" id="references" href="http://dahi.manoa.hawaii.edu/silence/References.html">References</a>
 				<a class= "fade-in" id="appendix" href="http://dahi.manoa.hawaii.edu/silence/Appendix.html">Appendix: Text Definition of Poems</a>
 		</div>
 		</div>
 		<div id="instructions" class="poemaudio-center">
-		<a id="sectiontitle">C O N - V O L V - O</a>
+		<a id="sectiontitle">C O N - V O L V - O</a><br><br><br>
 
-			<p>Starting here you can upload an audio file and, via convolution, "place" it in any of the spaces that the poems were recorded in. <br><br>
-            STEP 1: Upload a WAV file.</p>
-            <div class="upload-btn-wrapper"></div>
-	 		<form name="uploadaudio" id="uploadaudio" enctype="multipart/form-data" method="post" action="convolvo-preview.php">
-            <input name="soundinput" id="soundinput" class="btn" type="file" /><br /><br>
-			<button onclick='document.forms[0].submit();' class="btn" >U P L O A D</button>
+			<?php if ($error == ""): ?>
+<p>"<?php echo $_POST["filename"]; ?>" convoluted in <strong><?php echo $sitenames[$_POST["reverb"]]; ?></strong></p>
+<p><button class="btn" onclick="listen();">L I S T E N</button></p>
+<p id="listen"><iframe id="audiopreview" src="empty.html" style="width: 100%; height: 80px; border: 0px;"></iframe></p>
+<p>Download your file from within the preview frame above.</p>
+<p>N E X T &nbsp S T E P S:</p>
+<p>Don't like what you hear?</p>
+<p><button class="btn" onclick="if (confirm('Are you sure?')) { document.location.href='remove.php?filename=<?php echo $_POST["filename"]; ?>&output=<?php echo $output; ?>'; }">S T A R T &nbsp O V E R</button>
+  <br> 
+  (deletes input and output files).</p>
+<p><button class="btn" onclick="document.location.href='convolvo-preview.php?filename=<?php echo $_POST["filename"]; ?>';">CH A N G E &nbsp R E V E R B</button> 
+  <br>
+  (preserves input file).</p>
+<?php else: ?>
+<p>N E X T &nbsp S T E P S: </p>
+<p><?php echo $error; ?></p>
+<p><button class="btn" onclick="document.location.href='convolvo.php?delete=<?php echo $_POST["filename"]; ?>';">S T A R T &nbsp O V E R</button></p>
+
+<?php endif; ?>
             
-                        
 		</div>
 		<div class="poemmap-right">
 			<button class="poemmap-button fade-in">P o e m  &nbsp M a p</button>
