@@ -46,7 +46,7 @@ body
 	margin-left: 30px;
 	min-width: 200px;
 	width: 25%;
-	opacity: 0.4;
+	opacity: 0.6;
 	margin-top: 25px;
 	position: relative;
 	display: inline-block;
@@ -98,7 +98,7 @@ body
 	float: right;
 	min-width: 200px;
 	width: 25%;
-	opacity: 0.4;
+	opacity: 0.6;
 	margin-top: 25px;
 	position: relative;
 	display: inline-block;
@@ -217,7 +217,14 @@ body
 	background-color: inherit;
 	opacity: 0.5;
 }
-
+#convolvo_side
+{
+	top: 270px;
+	left: -110px;
+	color: #ffccc1;
+	background-color: inherit;
+	opacity: 0.5;
+}
 #instructions {
 	color: #fdedff;
 	font-family: Playfair Display;
@@ -269,12 +276,13 @@ body
 			<a href="http://dahi.manoa.hawaii.edu/silence/index.html" class="fade-in" id="home">H o m e &nbsp &nbsp
 			<i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
 			<a href="http://dahi.manoa.hawaii.edu/silence/Convolution_Home.html" class="fade-in" id="convolution">C o n v o l u t i o n &nbsp &nbsp<i class="fa fa-music fa-2x" aria-hidden="true"></i></a>
+			<a href="http://dahi.manoa.hawaii.edu/silence/convolvo.php" class="fade-in" id="convolvo_side">C o n v o l v o &nbsp &nbsp <i class="fa fa-file-audio-o fa-2x" aria-hidden="true"></i></a>
 		</div>
 	
 		<div class="tableofcontents">
 			<button class="tableofcontents-button fade-in">T a b l e &nbsp O f &nbsp C o n t e n t s</button>
 			<div class="tableofcontents-content">
-				<a class="fade-in" id="author_statement" href="http://dahi.manoa.hawaii.edu/silence/Author_Statement.html">Author's Statement</a>
+				<!--<a class="fade-in" id="author_statement" href="http://dahi.manoa.hawaii.edu/silence/Author_Statement.html">Author's Statement</a>-->
 				<a class= "fade-in" id="def_archive" href="http://dahi.manoa.hawaii.edu/silence/Definition_Archive.html">Definition: Archive</a>
 				<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/Definition_Silence.html">Definition: Silence</a>
 				<a class= "fade-in" id="def_4D" href="http://dahi.manoa.hawaii.edu/silence/Definition_4D.html">Definition: 4D</a>

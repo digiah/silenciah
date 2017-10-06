@@ -65,7 +65,7 @@ strong
 	margin-left: 30px;
 	min-width: 200px;
 	width: 25%;
-	opacity: 0.5;
+	opacity: 0.6;
 	margin-top: 25px;
 	position: relative;
 	display: inline-block;
@@ -106,6 +106,14 @@ strong
 	position: relative;
 	display: inline-block;
 }
+#convolvo
+{
+	color: #f2c9ff;	
+	font-size: 14px;
+	font-family: Playfair Display;
+	white-space: pre-wrap;
+	margin-top: 10px;
+}
 .convolution_home p, ul
 {
 	font-size: 14px;
@@ -120,7 +128,7 @@ strong
 	float: right;
 	min-width: 200px;
 	width: 25%;
-	opacity: 0.4;
+	opacity: 0.6;
 	margin-top: 25px;
 	position: relative;
 	display: inline-block;
@@ -229,7 +237,14 @@ strong
 	background-color: inherit;
 	opacity: 0.5;
 }
-
+#convolvo_side
+{
+	top: 270px;
+	left: -110px;
+	color: #ffccc1;
+	background-color: inherit;
+	opacity: 0.5;
+}
 
 </style>
 <meta charset="UTF-8">
@@ -245,11 +260,12 @@ strong
 		<a href="http://dahi.manoa.hawaii.edu/silence/index.html" class="fade-in" id="home">H o m e &nbsp &nbsp
 		<i class="fa fa-home fa-2x" aria-hidden="true"></i></a>
 		<a href="http://dahi.manoa.hawaii.edu/silence/Convolution_Home.html" class="fade-in" id="convolution">C o n v o l u t i o n &nbsp &nbsp<i class="fa fa-music fa-2x" aria-hidden="true"></i></a>
+		<a href="http://dahi.manoa.hawaii.edu/silence/convolvo.php" class="fade-in" id="convolvo_side">C o n v o l v o &nbsp &nbsp <i class="fa fa-file-audio-o fa-2x" aria-hidden="true"></i></a>
 	</div>
 	<div class="tableofcontents">
 		<button class="tableofcontents-button fade-in">T a b l e &nbsp O f &nbsp C o n t e n t s</button>
 		<div class="tableofcontents-content">
-			<a class="fade-in" id="author_statement" href="http://dahi.manoa.hawaii.edu/silence/Author_Statement.html">Author's Statement</a>
+			<!--<a class="fade-in" id="author_statement" href="http://dahi.manoa.hawaii.edu/silence/Author_Statement.html">Author's Statement</a>-->
 			<a class= "fade-in" id="def_archive" href="http://dahi.manoa.hawaii.edu/silence/Definition_Archive.html">Definition: Archive</a>
 			<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/Definition_Silence.html">Definition: Silence</a>
 			<a class= "fade-in" id="def_4D" href="http://dahi.manoa.hawaii.edu/silence/Definition_4D.html">Definition: 4D</a>
@@ -261,7 +277,7 @@ strong
 	<div class="convolution_home">
 		<p id="sectiontitle">C O N V O L U T I O N</p>
 
-		<p>
+	<p>
 <strong>What is Convolution?</strong>
 
 Convolution is the folding together of a sound and a space so that it sounds like it is occurring "in" the space. This is done by taking a sort of digital fingerprint of the target space by recording an impulse, like a balloon pop, then removing the impulse in an audio editor, leaving only the sound of the space behind, its reverberation. This fingerprint is called an impulse response. Any other sound can then be played "through" the impulse response (the actual process is a kind of complex moving multiplication). The result is that the input sound resonates in the audible space of the impulse response, so a singer in a dead room can be made to sound as if she is singing in the third pew of St. John the Divine Cathedral as heard by a listener twenty feet away, if the balloon was to be popped in the third pew, and the microphone used to record it was twenty feet away.</p>
@@ -293,6 +309,8 @@ Turn the recorder on, give the date and place or other identifying information t
 Repeat for each space.
 
 Backup your sound files once you have recorded them and give them descriptive names.
+
+<a href="http://dahi.manoa.hawaii.edu/silence/convolvo.php" id="convolvo"><strong>Convolute a sound!</strong></a>
 </p>
 </p>
 
