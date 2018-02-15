@@ -38,6 +38,14 @@ body
 	text-align: center;
 	font-family: Raleway;
 }
+
+#title p {
+	color: antiquewhite;
+	font-size: 60%;
+	text-align: center;
+	font-family: Raleway;
+}
+
 .tableofcontents
 {
 	text-align: center;
@@ -139,7 +147,7 @@ body
 	white-space: pre-wrap;
 	margin-top: 25px;
 }
-.sidenavmenu
+.sidenav
 {
 	min-width: 200px;
 	width: 5%;
@@ -152,6 +160,7 @@ body
 	width: 200px;
 	text-decoration: none;
 	font-size: 16px;
+	margin-top: 40px;
 	font-family: Raleway;
 }
 
@@ -270,6 +279,8 @@ body
 	<div id="title">
 
 	<h1>A R C H I V E &nbsp o f &nbsp S I L E N C E </h1>
+	<p> B Y &nbsp J U L I A &nbsp W I E T I N G</p>
+
     </div>
 
 		<div class="sidenav" id="sidenavmenu">
@@ -282,14 +293,14 @@ body
 		<div class="tableofcontents">
 			<button class="tableofcontents-button fade-in">T a b l e &nbsp O f &nbsp C o n t e n t s</button>
 			<div class="tableofcontents-content">
-				<!--<a class="fade-in" id="author_statement" href="http://dahi.manoa.hawaii.edu/silence/Author_Statement.html">Author's Statement</a>-->
 				<a class= "fade-in" id="def_archive" href="http://dahi.manoa.hawaii.edu/silence/Definition_Archive.html">Definition: Archive</a>
 				<a class= "fade-in" id="def_silence" href="http://dahi.manoa.hawaii.edu/silence/Definition_Silence.html">Definition: Silence</a>
 				<a class= "fade-in" id="def_4D" href="http://dahi.manoa.hawaii.edu/silence/Definition_4D.html">Definition: 4D</a>
 				<a class= "fade-in" id="essay" href="http://dahi.manoa.hawaii.edu/silence/Essay.html">Essay</a>
-				<a class= "fade-in" id="convolvo" href="#" onclick="if (confirm('Starting over, are you sure?')) { document.location.href='remove.php?filename=-1505003660.wav'; return false; }">Convolute a Sound</a>
+				<a class= "fade-in" id="convolvo" href="http://dahi.manoa.hawaii.edu/silence/convolvo.php">Convolute a Sound</a>
 				<a class= "fade-in" id="references" href="http://dahi.manoa.hawaii.edu/silence/References.html">References</a>
 				<a class= "fade-in" id="appendix" href="http://dahi.manoa.hawaii.edu/silence/Appendix.html">Appendix: Text Definition of Poems</a>
+				<a class="fade-in" id="credits" href="http://dahi.manoa.hawaii.edu/silence/Credits.html">Credits</a>
 		</div>
 		</div>
 		<div id="instructions" class="poemaudio-center">
